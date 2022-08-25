@@ -45,11 +45,10 @@ IMPLICIT NONE
   REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)       :: VarCCN_ss_02, VarCCN_ss_04, VarCCN_ss_05
   REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)       :: VarCCN_ss_06, VarCCN_ss_08, VarCCN_ss_1
   REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)       :: VarCCN_ss_015, VarCCN_ss_025
-  !msh
-  REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)	:: VarCCN_02_SSs, VarCCN_02_SSm, VarCCN_02_SSl
-
-!--msh
+  !--msh
   REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)	:: geop
+  !msh                                                                                                                                                                                                           
+  REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)       :: VarCCN_02_SSs, VarCCN_02_SSm, VarCCN_02_SSl
   !msh
   REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)	:: VarCCN_02_OMh, VarCCN_02_BCh, VarCCN_02_SU
   !msh
@@ -59,9 +58,9 @@ IMPLICIT NONE
   REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)	:: VarCCN_10_SSs, VarCCN_10_SSm, VarCCN_10_SSl
   REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)	:: VarCCN_10_OMh, VarCCN_10_BCh, VarCCN_10_SU 
   !msh Dust speicies
-  REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)       :: VarCCN_02_DUs, VarCCN_02_DUm, VarCCN_02_DUl
-  REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)       :: VarCCN_04_DUs, VarCCN_04_DUm, VarCCN_04_DUl 
-  REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)       :: VarCCN_10_DUs, VarCCN_10_DUm, VarCCN_10_DUl
+  !REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)       :: VarCCN_02_DUs, VarCCN_02_DUm, VarCCN_02_DUl
+  !REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)       :: VarCCN_04_DUs, VarCCN_04_DUm, VarCCN_04_DUl 
+  !REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)       :: VarCCN_10_DUs, VarCCN_10_DUm, VarCCN_10_DUl
   !msh Number concentrations 
   REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)	:: VarNC_SSs, VarNC_SSm, VarNC_SSl
   REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)	:: VarNC_DUs, VarNC_DUm, VarNC_DUl
@@ -251,9 +250,9 @@ IMPLICIT NONE
   ALLOCATE(VarCCN_02_BCh(nLon, nLat, nLev, nTimes))   
   ALLOCATE(VarCCN_02_SU(nLon, nLat, nLev, nTimes))
   !msh
-  ALLOCATE(VarCCN_02_DUs(nLon, nLat, nLev, nTimes))
-  ALLOCATE(VarCCN_02_DUm(nLon, nLat, nLev, nTimes))
-  ALLOCATE(VarCCN_02_DUl(nLon, nLat, nLev, nTimes))
+  !ALLOCATE(VarCCN_02_DUs(nLon, nLat, nLev, nTimes))
+  !ALLOCATE(VarCCN_02_DUm(nLon, nLat, nLev, nTimes))
+  !ALLOCATE(VarCCN_02_DUl(nLon, nLat, nLev, nTimes))
 
 ! ALLOCATE(VarCCN_04(nLon, nLat, nLev, nTimes))   
   ALLOCATE(VarCCN_04_SSs(nLon, nLat, nLev, nTimes))   
@@ -263,9 +262,9 @@ IMPLICIT NONE
   ALLOCATE(VarCCN_04_BCh(nLon, nLat, nLev, nTimes))   
   ALLOCATE(VarCCN_04_SU(nLon, nLat, nLev, nTimes))
   !msh
-  ALLOCATE(VarCCN_04_DUs(nLon, nLat, nLev, nTimes))
-  ALLOCATE(VarCCN_04_DUm(nLon, nLat, nLev, nTimes))
-  ALLOCATE(VarCCN_04_DUl(nLon, nLat, nLev, nTimes))
+  !ALLOCATE(VarCCN_04_DUs(nLon, nLat, nLev, nTimes))
+  !ALLOCATE(VarCCN_04_DUm(nLon, nLat, nLev, nTimes))
+  !ALLOCATE(VarCCN_04_DUl(nLon, nLat, nLev, nTimes))
 ! ALLOCATE(VarCCN_10(nLon, nLat, nLev, nTimes))
   ALLOCATE(VarCCN_10_SSs(nLon, nLat, nLev, nTimes))   
   ALLOCATE(VarCCN_10_SSm(nLon, nLat, nLev, nTimes))    
@@ -274,9 +273,9 @@ IMPLICIT NONE
   ALLOCATE(VarCCN_10_BCh(nLon, nLat, nLev, nTimes))   
   ALLOCATE(VarCCN_10_SU(nLon, nLat, nLev, nTimes))
   !msh
-  ALLOCATE(VarCCN_10_DUs(nLon, nLat, nLev, nTimes))
-  ALLOCATE(VarCCN_10_DUm(nLon, nLat, nLev, nTimes))
-  ALLOCATE(VarCCN_10_DUl(nLon, nLat, nLev, nTimes))
+  !ALLOCATE(VarCCN_10_DUs(nLon, nLat, nLev, nTimes))
+  !ALLOCATE(VarCCN_10_DUm(nLon, nLat, nLev, nTimes))
+  !ALLOCATE(VarCCN_10_DUl(nLon, nLat, nLev, nTimes))
     
 ! ALLOCATE(VarMC(nLon, nLat, nLev, nTimes))
 ! ALLOCATE(VarMC_SSs(nLon, nLat, nLev, nTimes))   
@@ -486,21 +485,21 @@ IMPLICIT NONE
         !VarMC_SSl(lo,la,ig,it) = -9999.99_dp
         VarNC_SSl(lo,la,ig,it) = -9999.99_dp
         !msh
-        VarCCN_02_DUs(lo,la,ig,it) =  -9999.99_dp
-        VarCCN_04_DUs(lo,la,ig,it) =  -9999.99_dp
-        VarCCN_10_DUs(lo,la,ig,it) =  -9999.99_dp
+        !VarCCN_02_DUs(lo,la,ig,it) =  -9999.99_dp
+        !VarCCN_04_DUs(lo,la,ig,it) =  -9999.99_dp
+        !VarCCN_10_DUs(lo,la,ig,it) =  -9999.99_dp
         !VarMC_DUs(lo,la,ig,it) = -9999.99_dp
         VarNC_DUs(lo,la,ig,it) = -9999.99_dp
-        VarCCN_02_DUm(lo,la,ig,it) = -9999.99_dp
-        VarCCN_04_DUm(lo,la,ig,it) = -9999.99_dp
-        VarCCN_10_DUm(lo,la,ig,it) = -9999.99_dp
+        !VarCCN_02_DUm(lo,la,ig,it) = -9999.99_dp
+        !VarCCN_04_DUm(lo,la,ig,it) = -9999.99_dp
+        !VarCCN_10_DUm(lo,la,ig,it) = -9999.99_dp
         !VarMC_DUm(lo,la,ig,it) = -9999.99_dp
         VarNC_DUm(lo,la,ig,it) = -9999.99_dp
 !   
         !VarMC_DUl(lo,la,ig,it) = -9999.99_dp
-        VarCCN_02_DUl(lo,la,ig,it) = -9999.99_dp
-        VarCCN_04_DUl(lo,la,ig,it) = -9999.99_dp
-        VarCCN_10_DUl(lo,la,ig,it) = -9999.99_dp
+        !VarCCN_02_DUl(lo,la,ig,it) = -9999.99_dp
+        !VarCCN_04_DUl(lo,la,ig,it) = -9999.99_dp
+        !VarCCN_10_DUl(lo,la,ig,it) = -9999.99_dp
         VarNC_DUl(lo,la,ig,it) = -9999.99_dp
         
 !   
@@ -568,21 +567,21 @@ IMPLICIT NONE
 !   VarMC_SSl(lo,la,ig,it) = mconc(kbdim,klev,3)
     VarNC_SSl(lo,la,ig,it) = nconc(kbdim,klev,3)
 !msh   
-    VarCCN_02_DUs(lo,la,ig,it) = cnfrac(kbdim,klev,8,4)*nconc(kbdim,klev,4)
-    VarCCN_04_DUs(lo,la,ig,it) = cnfrac(kbdim,klev,17,4)*nconc(kbdim,klev,4)
-    VarCCN_10_DUs(lo,la,ig,it) = cnfrac(kbdim,klev,28,4)*nconc(kbdim,klev,4)
+    !VarCCN_02_DUs(lo,la,ig,it) = cnfrac(kbdim,klev,8,4)*nconc(kbdim,klev,4)
+    !VarCCN_04_DUs(lo,la,ig,it) = cnfrac(kbdim,klev,17,4)*nconc(kbdim,klev,4)
+    !VarCCN_10_DUs(lo,la,ig,it) = cnfrac(kbdim,klev,28,4)*nconc(kbdim,klev,4)
 !   VarMC_DUs(lo,la,ig,it) = mconc(kbdim,klev,4) 
     VarNC_DUs(lo,la,ig,it) = nconc(kbdim,klev,4)
 !msh
-    VarCCN_02_DUm(lo,la,ig,it) = cnfrac(kbdim,klev,8,5)*nconc(kbdim,klev,5)
-    VarCCN_04_DUm(lo,la,ig,it) = cnfrac(kbdim,klev,17,5)*nconc(kbdim,klev,5)
-    VarCCN_10_DUm(lo,la,ig,it) = cnfrac(kbdim,klev,28,5)*nconc(kbdim,klev,5)
+    !VarCCN_02_DUm(lo,la,ig,it) = cnfrac(kbdim,klev,8,5)*nconc(kbdim,klev,5)
+    !VarCCN_04_DUm(lo,la,ig,it) = cnfrac(kbdim,klev,17,5)*nconc(kbdim,klev,5)
+    !VarCCN_10_DUm(lo,la,ig,it) = cnfrac(kbdim,klev,28,5)*nconc(kbdim,klev,5)
 !   VarMC_DUm(lo,la,ig,it) = mconc(kbdim,klev,5)
     VarNC_DUm(lo,la,ig,it) = nconc(kbdim,klev,5)
 !msh
-    VarCCN_02_DUl(lo,la,ig,it) = cnfrac(kbdim,klev,8,6)*nconc(kbdim,klev,6)
-    VarCCN_04_DUl(lo,la,ig,it) = cnfrac(kbdim,klev,17,6)*nconc(kbdim,klev,6)
-    VarCCN_10_DUl(lo,la,ig,it) = cnfrac(kbdim,klev,28,6)*nconc(kbdim,klev,6)    
+    !VarCCN_02_DUl(lo,la,ig,it) = cnfrac(kbdim,klev,8,6)*nconc(kbdim,klev,6)
+    !VarCCN_04_DUl(lo,la,ig,it) = cnfrac(kbdim,klev,17,6)*nconc(kbdim,klev,6)
+    !VarCCN_10_DUl(lo,la,ig,it) = cnfrac(kbdim,klev,28,6)*nconc(kbdim,klev,6)    
 !   VarMC_DUl(lo,la,ig,it) = mconc(kbdim,klev,6)
     VarNC_DUl(lo,la,ig,it) = nconc(kbdim,klev,6)
 !   
@@ -647,7 +646,7 @@ IMPLICIT NONE
 
  !WRITE(*,*) 'hyam', Hyam
   
- CALL netcdf_output(   ofile1, year, mon, day, &
+ CALL netcdf_output(   ofile1, ofile2, year, mon, day, &
  			nTimes, nLev, nLat, nLon, &
 			time, lev, lat, lon, hyam, hybm, &
                         SP,VarNC, VarNC_SSs, VarNC_SSm, VarNC_SSl, &                                                                                                                                             
@@ -657,9 +656,6 @@ IMPLICIT NONE
                         VarCCN_04_SSs, VarCCN_04_SSm, VarCCN_04_SSl, &
                         VarCCN_10_SSs, VarCCN_10_SSm, VarCCN_10_SSl, &
                         VarCCN_02_OMh,VarCCN_04_OMh,VarCCN_10_OMh ,&
-                        VarCCN_02_DUs, VarCCN_02_DUm, VarCCN_02_DUl, &
-                        VarCCN_04_DUs, VarCCN_04_DUm, VarCCN_04_DUl, &
-                        VarCCN_10_DUs, VarCCN_10_DUm, VarCCN_10_DUl, &
                         VarCCN_02_BCh, VarCCN_04_BCh, VarCCN_10_BCh, &
                         VarCCN_02_SU, VarCCN_04_SU, VarCCN_10_SU,  &
                         geop)
