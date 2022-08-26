@@ -12,13 +12,13 @@ CONTAINS
 !  			ofilename1, ofilename2, ofilename3, year, mon)
 
   SUBROUTINE read_input(ifilename1, ifilename2, &
-  			ofilename1, year, mon, day)
+  			ofilename1, ofilename2, ofilename3, year, mon, day)
 
   IMPLICIT NONE
   
     ! Output parameters
     CHARACTER(len=150), INTENT(out)	:: ifilename1, ifilename2            
-    CHARACTER(len=150), INTENT(out)	:: ofilename1
+    CHARACTER(len=150), INTENT(out)	:: ofilename1, ofilename2, ofilename3
     CHARACTER(len=4), INTENT(out)	:: year
     CHARACTER(len=2), INTENT(out)	:: mon
     CHARACTER(len=2), INTENT(out)       :: day
@@ -46,10 +46,10 @@ CONTAINS
       READ(10,'(A)') ofilename1  ! read output filename to know which file to create
       !WRITE(*,*) 'ofilename1:', ofilename1        
 
-!      READ(10,'(A)') ofilename2  ! read output filename to know which file to create
+      READ(10,'(A)') ofilename2  ! read output filename to know which file to create
 !      !WRITE(*,*) 'ofilename2:', ofilename2    
 
-!      READ(10,'(A)') ofilename3  ! read output filename to know which file to create
+      READ(10,'(A)') ofilename3  ! read output filename to know which file to create
 !      !WRITE(*,*) 'ofilename3:', ofilename3    
 
       READ(10,'(A)') year  ! read output filename to know which file to create
