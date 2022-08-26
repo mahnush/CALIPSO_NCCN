@@ -307,29 +307,29 @@ CONTAINS
       WRITE(*,*) 'variable ID6', varID6	     
     status = nf90_get_var(ncID2, varID6, VarMix_DUl)
       IF(status /= nf90_NoErr) CALL handle_err(status)
-
+    !msh
     status = nf90_inq_varid(ncID2,Paramname(7),varID7) 
       IF(status /= nf90_NoErr) CALL handle_err(status)
       WRITE(*,*) 'variable ID7', varID7	     
-    status = nf90_get_var(ncID2, varID7, VarMix_OMn)
+    status = nf90_get_var(ncID2, varID7, VarMix_OMh)
       IF(status /= nf90_NoErr) CALL handle_err(status)
-
+    !msh
     status = nf90_inq_varid(ncID2,Paramname(8),varID8) 
       IF(status /= nf90_NoErr) CALL handle_err(status)
       WRITE(*,*) 'variable ID8', varID8	     
-    status = nf90_get_var(ncID2, varID8, VarMix_OMh)
+    status = nf90_get_var(ncID2, varID8, VarMix_OMn)
       IF(status /= nf90_NoErr) CALL handle_err(status)
-
+    !msh
     status = nf90_inq_varid(ncID2,Paramname(9),varID9) 
       IF(status /= nf90_NoErr) CALL handle_err(status)
       WRITE(*,*) 'variable ID9', varID9	     
-    status = nf90_get_var(ncID2, varID9, VarMix_BCn)
+    status = nf90_get_var(ncID2, varID9, VarMix_BCh)
       IF(status /= nf90_NoErr) CALL handle_err(status)
-
+    !msh
     status = nf90_inq_varid(ncID2,Paramname(10),varID10) 
       IF(status /= nf90_NoErr) CALL handle_err(status)
       WRITE(*,*) 'variable ID10', varID10	     
-    status = nf90_get_var(ncID2, varID10, VarMix_BCh)
+    status = nf90_get_var(ncID2, varID10, VarMix_BCn)
       IF(status /= nf90_NoErr) CALL handle_err(status)
 
     status = nf90_inq_varid(ncID2,Paramname(11),varID11) 
@@ -636,116 +636,6 @@ CONTAINS
 !   IF(status /= nf90_NoErr) CALL handle_err(status)	  
     !  WRITE(*,*) 'def nc'
 
-    ! CCN_01
-    !status = nf90_def_var(ncid1, "CCN_01", nf90_float,(/ lonID, latID, levID, timeID /), var8)
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var8, "long_name", "cloud condensation nuclei at w=0.01m/s")
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var8, "units", "m**-3")
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var8, "_FillValue", FillAtt)
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !   WRITE(*,*) 'def ccn01'
-    
-    ! CCN_02
-    !status = nf90_def_var(ncid1, "CCN_02", nf90_float,(/ lonID, latID, levID, timeID /), var9)
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var9, "long_name", "cloud condensation nuclei at w=0.0278m/s")
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var9, "units", "m**-3")
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var9, "_FillValue", FillAtt)
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !   WRITE(*,*) 'def ccn02'
-    
-    ! CCN_03
-    !status = nf90_def_var(ncid1, "CCN_03", nf90_float,(/ lonID, latID, levID, timeID /), var10)
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var10, "long_name", "cloud condensation nuclei at w=0.0774m/s")
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var10, "units", "m**-3")
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var10, "_FillValue", FillAtt)
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !   WRITE(*,*) 'def ccn03'
-    
-    ! CCN_04
-    !status = nf90_def_var(ncid1, "CCN_04", nf90_float,(/ lonID, latID, levID, timeID /), var11)
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var11, "long_name", "cloud condensation nuclei at w=0.215m/s")
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var11, "units", "m**-3")
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var11, "_FillValue", FillAtt)
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !   WRITE(*,*) 'def ccn04'
-    
-    ! CCN_05
-    !status = nf90_def_var(ncid1, "CCN_05", nf90_float,(/ lonID, latID, levID, timeID /), var12)
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var12, "long_name", "cloud condensation nuclei at w=0.599m/s")
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var12, "units", "m**-3")
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var12, "_FillValue", FillAtt)
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !   WRITE(*,*) 'def ccn05'
-
-    ! CCN_06
-    !status = nf90_def_var(ncid1, "CCN_06", nf90_float,(/ lonID, latID, levID, timeID /), var13)
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var13, "long_name", "cloud condensation nuclei at w=1.67m/s")
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var13, "units", "m**-3")
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var13, "_FillValue", FillAtt)
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !   WRITE(*,*) 'def ccn06'
-
-    ! CCN_07
-    !status = nf90_def_var(ncid1, "CCN_07", nf90_float,(/ lonID, latID, levID, timeID /), var14)
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var14, "long_name", "cloud condensation nuclei at w=4.64m/s")
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var14, "units", "m**-3")
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var14, "_FillValue", FillAtt)
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !   WRITE(*,*) 'def ccn07'
-    
-    ! CCN_08
-    !status = nf90_def_var(ncid1, "CCN_08", nf90_float,(/ lonID, latID, levID, timeID /), var15)
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var15, "long_name", "cloud condensation nuclei at w=12.9m/s")
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var15, "units", "m**-3")
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var15, "_FillValue", FillAtt)
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !   WRITE(*,*) 'def ccn08'
-    
-    ! CCN_09
-    !status = nf90_def_var(ncid1, "CCN_09", nf90_float,(/ lonID, latID, levID, timeID /), var16)
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var16, "long_name", "cloud condensation nuclei at w=35.9m/s")
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var16, "units", "m**-3")
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var16, "_FillValue", FillAtt)
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !   WRITE(*,*) 'def ccn09'
-
-    ! CCN_10
-    !status = nf90_def_var(ncid1, "CCN_10", nf90_float,(/ lonID, latID, levID, timeID /), var17)
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var17, "long_name", "cloud condensation nuclei at w=100m/s")
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var17, "units", "m**-3")
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-    !status = nf90_put_att(ncid1, var17, "_FillValue", FillAtt)
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-
-        !   WRITE(*,*) 'def ccn10'
     ! CCN_ss_02
     status = nf90_def_var(ncid1, "CCN_ss_02", nf90_float,(/ lonID, latID, levID, timeID /), var18)
     IF(status /= nf90_NoErr) CALL handle_err(status)
@@ -866,46 +756,8 @@ CONTAINS
 !   WRITE(*,*) 'hybm'
    status = nf90_put_var(ncid1, var7, VarSP)             !SP
    IF(status /= nf90_NoErr) CALL handle_err(status)
-!   WRITE(*,*) 'SP'
-!   WRITE(*,*) 'lon'
-!   status = nf90_put_var(ncid1, var5, REAL(VarMC))      ! MC	       
-!    IF(status /= nf90_NoErr) CALL handle_err(status)
-!   WRITE(*,*) 'mc'
-!   status = nf90_put_var(ncid1, var6, REAL(VarNC))      ! NC	       
-!    IF(status /= nf90_NoErr) CALL handle_err(status)
-!   WRITE(*,*) 'nc'
-    !status = nf90_put_var(ncid1, var8, REAL(VarCCN_01))
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-!    WRITE(*,*) 'ccn_01'
-    !status = nf90_put_var(ncid1, var9, REAL(VarCCN_02))
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-!    WRITE(*,*) 'ccn_02'
-    !status = nf90_put_var(ncid1, var10, REAL(VarCCN_03))
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-!    WRITE(*,*) 'ccn_03'
-    !status = nf90_put_var(ncid1, var11, REAL(VarCCN_04))
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-!    WRITE(*,*) 'ccn_04'
-    !status = nf90_put_var(ncid1, var12, REAL(VarCCN_05))
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-!    WRITE(*,*) 'ccn_05'
-    !status = nf90_put_var(ncid1, var13, REAL(VarCCN_06))
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-!     WRITE(*,*) 'ccn_06'
-    !status = nf90_put_var(ncid1, var14, REAL(VarCCN_07))
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-!    WRITE(*,*) 'ccn_07'
-    !status = nf90_put_var(ncid1, var15, REAL(VarCCN_08))
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-!    WRITE(*,*) 'ccn_08'
-    !status = nf90_put_var(ncid1, var16, REAL(VarCCN_09))
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-!    WRITE(*,*) 'ccn_09'
-    !status = nf90_put_var(ncid1, var17, REAL(VarCCN_10))
-    !IF(status /= nf90_NoErr) CALL handle_err(status)
-!     WRITE(*,*) 'ccn_10'
-    
-    status = nf90_put_var(ncid1, var18, REAL(VarCCN_ss_02))
+
+   status = nf90_put_var(ncid1, var18, REAL(VarCCN_ss_02))
     IF(status /= nf90_NoErr) CALL handle_err(status)
     !   WRITE(*,*) 'ccn_ss_02'
     status = nf90_put_var(ncid1, var19, REAL(VarCCN_ss_04))
@@ -938,636 +790,671 @@ CONTAINS
     
    !--- close output netCDF file
    status = nf90_close(ncid1)
-    IF(status /= nf90_NoErr) CALL handle_err(status)  
+    IF(status /= nf90_NoErr) CALL handle_err(status)   
+ END SUBROUTINE netcdf_output
+ !WRITE(*,*) ' '  
+ !WRITE(*,*) 'FINISHED OUTPUT 1'
+ SUBROUTINE netcdf_output_supplementary_variables(ofile2, ofile3, year, mon, day, &                                                                                                                              
+                                                  nT, nLe, nLa, nLo, &
+                                                  VarTime, VarLev, VarLat, VarLon, &
+                                                  VarHyam, VarHybm, VarSP, &
+                                                  VarNC, VarNC_SSs, VarNC_SSm, VarNC_SSl, &
+                                                  VarNC_DUs, VarNC_DUm, VarNC_DUl, &
+                                                  VarNC_OMn, VarNC_OMh, VarNC_BCn, VarNC_BCh, VarNC_SU, &
+                                                  VarCCN_02_SSs, VarCCN_02_SSm, VarCCN_02_SSl, &
+                                                  VarCCN_02_OMh, VarCCN_02_BCh, VarCCN_02_SU, &
+                                                  VarCCN_04_SSs, VarCCN_04_SSm, VarCCN_04_SSl, &
+                                                  VarCCN_04_OMh, VarCCN_04_BCh, VarCCN_04_SU, &
+                                                  VarCCN_10_SSs, VarCCN_10_SSm, VarCCN_10_SSl, &
+                                                  VarCCN_10_OMh, VarCCN_10_BCh, VarCCN_10_SU,geop)
+ USE mo_kind,          ONLY: dp
+ !USE mo_box_aerosols, ONLY: aertype                                                                                                                                                                             
+ !USE mo_ham_ccnctl,   ONLY: nsat
+ 
+ IMPLICIT NONE
+  CHARACTER(len=*), INTENT(in)                          :: ofile2, ofile3
+ CHARACTER(len=4), INTENT(in)                          :: year
+ CHARACTER(len=2), INTENT(in)                          :: mon
+ CHARACTER(len=2), INTENT(in)                          :: day
+ INTEGER,  INTENT(in)                                  :: nT, nLe, nLa, nLo  
+ REAL(dp), INTENT(in), DIMENSION(nT)                   :: VarTime
+ REAL(dp), INTENT(in), DIMENSION(nLe)                  :: VarLev
+ REAL(dp), INTENT(in), DIMENSION(nLa)                  :: VarLat
+ REAL(dp), INTENT(in), DIMENSION(nLo)                  :: VarLon
+ REAL(dp), INTENT(in), DIMENSION(nLe)                  :: VarHyam
+ REAL(dp), INTENT(in), DIMENSION(nLe)                  :: VarHybm
+ REAL(dp), INTENT(in), DIMENSION(nLo,nLa,nT)           :: VarSP
+ REAL(dp), INTENT(in), DIMENSION(nLo,nLa,nLe,nT)       :: geop
+ REAL(dp), INTENT(in), DIMENSION(nLo,nLa,nLe,nT)       :: VarNC
+ REAL(dp), INTENT(in), DIMENSION(nLo,nLa,nLe,nT)       :: VarNC_SSs, VarNC_SSm, VarNC_SSl
+ REAL(dp), INTENT(in), DIMENSION(nLo,nLa,nLe,nT)       :: VarNC_DUs, VarNC_DUm, VarNC_DUl
+ REAL(dp), INTENT(in), DIMENSION(nLo,nLa,nLe,nT)       :: VarNC_OMn, VarNC_OMh, VarNC_BCn, VarNC_BCh, VarNC_SU
+ REAL(dp), INTENT(in), DIMENSION(nLo,nLa,nLe,nT)       :: VarCCN_02_SSs, VarCCN_02_SSm, VarCCN_02_SSl
+ REAL(dp), INTENT(in), DIMENSION(nLo,nLa,nLe,nT)       :: VarCCN_02_OMh, VarCCN_02_BCh, VarCCN_02_SU
+ REAL(dp), INTENT(in), DIMENSION(nLo,nLa,nLe,nT)       :: VarCCN_04_SSs, VarCCN_04_SSm, VarCCN_04_SSl
+ REAL(dp), INTENT(in), DIMENSION(nLo,nLa,nLe,nT)       :: VarCCN_04_OMh, VarCCN_04_BCh, VarCCN_04_SU
+ REAL(dp), INTENT(in), DIMENSION(nLo,nLa,nLe,nT)       :: VarCCN_10_SSs, VarCCN_10_SSm, VarCCN_10_SSl
+ REAL(dp), INTENT(in), DIMENSION(nLo,nLa,nLe,nT)       :: VarCCN_10_OMh, VarCCN_10_BCh, VarCCN_10_SU
+  ! Local parameters
+ INTEGER :: ncid2,ncid3,status 
+ INTEGER :: timeID,levID,latID,lonID
+ ! INTEGER :: var1, var2, var3, var4
+ INTEGER :: var102,var202,var302,var402,var502,var602,var702
+ INTEGER :: var20,var21,var22,var23,var24,var25,var26,var27,var28,var29,var30,var31,var32
+ INTEGER :: var103,var203,var303,var403,var503,var603,var703
+ INTEGER :: var33,var34,var35,var36,var37,var38,var39,var40,var41,var42,var43,var44
+ INTEGER :: var45,var46,var47,var48,var49,var50,var51,var52
 
-!  WRITE(*,*) ' '  
-!  WRITE(*,*) 'FINISHED OUTPUT 1'
-
-
+ REAL, PARAMETER       :: FillAtt = -9999.99
+ REAL(dp), PARAMETER   :: FillAtt2 = -9999.99
+ CHARACTER(len=31)     :: timestr = "hours since XXXX-YY-DD 00:00:00"
+ timestr(13:16) = year
+ timestr(18:19) = mon
+ timestr(21:22) = day
 ! !-------------------------------------------------------------------------
 ! !--- create output netCDF file
-! status = nf90_create(path = ofile2, cmode = NF90_NETCDF4, ncid = ncid2)
-!  IF(status /= nf90_noerr) CALL handle_err(status)
+ status = nf90_create(path = ofile2, cmode = NF90_NETCDF4, ncid = ncid2)
+  IF(status /= nf90_noerr) CALL handle_err(status)
 
 ! !--- Define the dimensions
-! status = nf90_def_dim(ncid2, "time", nf90_unlimited, timeID)
-!  IF(status /= nf90_noerr) CALL handle_err(status)
-! status = nf90_def_dim(ncid2, "lev", nLe, levID)
-!  IF(status /= nf90_noerr) CALL handle_err(status)   
-! status = nf90_def_dim(ncid2, "lat", nLa, latID)
-!  IF(status /= nf90_noerr) CALL handle_err(status)
-! status = nf90_def_dim(ncid2, "lon", nLo, lonID)
-!  IF(status /= nf90_noerr) CALL handle_err(status)
+ status = nf90_def_dim(ncid2, "time", nf90_unlimited, timeID)
+  IF(status /= nf90_noerr) CALL handle_err(status)
+ status = nf90_def_dim(ncid2, "lev", nLe, levID)
+  IF(status /= nf90_noerr) CALL handle_err(status)   
+ status = nf90_def_dim(ncid2, "lat", nLa, latID)
+  IF(status /= nf90_noerr) CALL handle_err(status)
+ status = nf90_def_dim(ncid2, "lon", nLo, lonID)
+  IF(status /= nf90_noerr) CALL handle_err(status)
 
 ! !--- Define global attributes
 ! status = nf90_put_att(ncid2, NF90_GLOBAL, "Aerosol Species", specscribe)  
 ! 
 ! ! Time   
-! status = nf90_def_var(ncid2, "time", nf90_double,(/ timeID /), var102)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var102, "long_name", "time")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var102, "units", timestr)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var102, "calendar", "proleptic_gregorian")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	       
-! status = nf90_put_att(ncid2, var102, "_FillValue", FillAtt2)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_def_var(ncid2, "time", nf90_double,(/ timeID /), var102)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var102, "long_name", "time")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid2, var102, "units", timestr)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid2, var102, "calendar", "proleptic_gregorian")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	       
+ status = nf90_put_att(ncid2, var102, "_FillValue", FillAtt2)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
 ! 
 ! !Lev
-! status = nf90_def_var(ncid2, "lev", nf90_double,(/ levID /), var202)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var202, "long_name", "model level")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var202, "units", "level")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid2, var202, "_FillValue", FillAtt2)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_def_var(ncid2, "lev", nf90_double,(/ levID /), var202)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var202, "long_name", "model level")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid2, var202, "units", "level")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid2, var202, "_FillValue", FillAtt2)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
 
 ! !Lat
-! status = nf90_def_var(ncid2, "lat", nf90_double,(/ latID /), var302)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var302, "long_name", "latitude")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var302, "units", "degrees_north")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid2, var302, "_FillValue", FillAtt2)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var302, "axis", "Y")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_def_var(ncid2, "lat", nf90_double,(/ latID /), var302)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var302, "long_name", "latitude")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid2, var302, "units", "degrees_north")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid2, var302, "_FillValue", FillAtt2)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid2, var302, "axis", "Y")
+ IF(status /= nf90_NoErr) CALL handle_err(status)
 
 ! !Lon
-! status = nf90_def_var(ncid2, "lon", nf90_double,(/ lonID /), var402)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var402, "long_name", "longitude")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var402, "units", "degrees_east")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid2, var402, "_FillValue", FillAtt2)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var402, "axis", "X")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_def_var(ncid2, "lon", nf90_double,(/ lonID /), var402)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var402, "long_name", "longitude")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid2, var402, "units", "degrees_east")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid2, var402, "_FillValue", FillAtt2)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid2, var402, "axis", "X")
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+    ! Hyam                                                                                                                                                                                                       
+ status = nf90_def_var(ncid2, "hyam", nf90_double,(/ levID /), var502)
+ IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var502, "long_name", "hybrid A coefficient at layer midpoints")
+ IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var502, "units", "Pa")
+ IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var502, "_FillValue", FillAtt2)
+ IF(status /= nf90_NoErr) CALL handle_err(status)
+   !WRITE(*,*) 'def hyam'                                                                                                                                                                                        
+    ! Hybm                                                                                                                                                                                                       
+ status = nf90_def_var(ncid2, "hybm", nf90_double,(/ levID /), var602)
+ IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var602, "long_name", "hybrid B coefficient at layer midpoints")
+ IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var602, "units", "Pa")
+ IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var602, "_FillValue", FillAtt2)
+ IF(status /= nf90_NoErr) CALL handle_err(status)
+ ! WRITE(*,*) 'def hybm'                                                                                                                                                                                       
+ ! SP                                                                                                                                                                                                          
+ status = nf90_def_var(ncid2, "sp", nf90_float,(/ lonID, latID, timeID /), var702)
+ IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var702, "long_name", "Surface Pressure")
+ IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var702, "units", "Pa")
+ IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var702, "_FillValue", FillAtt)
+ IF(status /= nf90_NoErr) CALL handle_err(status)
+ !  ! NCONC
+ 
+  status = nf90_def_var(ncid2, "NCONC", nf90_float,(/ lonID, latID, levID, timeID /), var20)                                                                                                                     
+   IF(status /= nf90_NoErr) CALL handle_err(status)                                                                                                                                                              
+  status = nf90_put_att(ncid2, var20, "long_name", "total aerosol number concentration")                                                                                                                         
+   IF(status /= nf90_NoErr) CALL handle_err(status)                                                                                                                                                              
+  status = nf90_put_att(ncid2, var20, "units", "m**-3")                                                                                                                                                          
+   IF(status /= nf90_NoErr) CALL handle_err(status)                                                                                                                                                              
+  status = nf90_put_att(ncid2, var20, "_FillValue", FillAtt)                                                                                                                                                     
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  
+ status = nf90_def_var(ncid2, "NCONC_SSs", nf90_float,(/ lonID, latID, levID, timeID /), var21)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var21, "long_name", "number concentration of small mode sea salt")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	  
+ status = nf90_put_att(ncid2, var21, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid2, var21, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	  
 
-! ! MCONC
-! status = nf90_def_var(ncid2, "MCONC_SSs", nf90_float,(/ lonID, latID, levID, timeID /), var10)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var10, "long_name", "mass concentration of small mode sea salt")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-! status = nf90_put_att(ncid2, var10, "units", "kg m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var10, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
+ status = nf90_def_var(ncid2, "NCONC_SSm", nf90_float,(/ lonID, latID, levID, timeID /), var22)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var22, "long_name", "number concentration of medium mode sea salt")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	  
+ status = nf90_put_att(ncid2, var22, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid2, var22, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	  
 
-! status = nf90_def_var(ncid2, "MCONC_SSm", nf90_float,(/ lonID, latID, levID, timeID /), var11)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var11, "long_name", "mass concentration of medium mode sea salt")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-! status = nf90_put_att(ncid2, var11, "units", "kg m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var11, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
+ status = nf90_def_var(ncid2, "NCONC_SSl", nf90_float,(/ lonID, latID, levID, timeID /), var23)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var23, "long_name", "number concentration of large mode sea salt")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	  
+ status = nf90_put_att(ncid2, var23, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid2, var23, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	  
 
-! status = nf90_def_var(ncid2, "MCONC_SSl", nf90_float,(/ lonID, latID, levID, timeID /), var12)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var12, "long_name", "mass concentration of large mode sea salt")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-! status = nf90_put_att(ncid2, var12, "units", "kg m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var12, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
+ status = nf90_def_var(ncid2, "NCONC_DUs", nf90_float,(/ lonID, latID, levID, timeID /), var24)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var24, "long_name", "number concentration of small mode dust")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	  
+ status = nf90_put_att(ncid2, var24, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid2, var24, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	  
 
-! status = nf90_def_var(ncid2, "MCONC_DUs", nf90_float,(/ lonID, latID, levID, timeID /), var13)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var13, "long_name", "mass concentration of small mode dust")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-! status = nf90_put_att(ncid2, var13, "units", "kg m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var13, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
+ status = nf90_def_var(ncid2, "NCONC_DUm", nf90_float,(/ lonID, latID, levID, timeID /), var25)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var25, "long_name", "number concentration of medium mode dust")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	  
+ status = nf90_put_att(ncid2, var25, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid2, var25, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	  
 
-! status = nf90_def_var(ncid2, "MCONC_DUm", nf90_float,(/ lonID, latID, levID, timeID /), var14)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var14, "long_name", "mass concentration of medium mode dust")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-! status = nf90_put_att(ncid2, var14, "units", "kg m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var14, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
+ status = nf90_def_var(ncid2, "NCONC_DUl", nf90_float,(/ lonID, latID, levID, timeID /), var26)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var26, "long_name", "number concentration of large mode dust")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	  
+ status = nf90_put_att(ncid2, var26, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid2, var26, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	  
 
-! status = nf90_def_var(ncid2, "MCONC_DUl", nf90_float,(/ lonID, latID, levID, timeID /), var15)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var15, "long_name", "mass concentration of large mode dust")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-! status = nf90_put_att(ncid2, var15, "units", "kg m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var15, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
+ status = nf90_def_var(ncid2, "NCONC_OMn", nf90_float,(/ lonID, latID, levID, timeID /), var27)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var27, "long_name", "number concentration of non-hydrophilic organic matter")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	  
+ status = nf90_put_att(ncid2, var27, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid2, var27, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	  
 
-! status = nf90_def_var(ncid2, "MCONC_OMn", nf90_float,(/ lonID, latID, levID, timeID /), var16)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var16, "long_name", "mass concentration of non-hydrophilic organic matter")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-! status = nf90_put_att(ncid2, var16, "units", "kg m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var16, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
+ status = nf90_def_var(ncid2, "NCONC_OMh", nf90_float,(/ lonID, latID, levID, timeID /), var28)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var28, "long_name", "number concentration of hydrophilic organic matter")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	  
+ status = nf90_put_att(ncid2, var28, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid2, var28, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	  
 
-! status = nf90_def_var(ncid2, "MCONC_OMh", nf90_float,(/ lonID, latID, levID, timeID /), var17)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var17, "long_name", "mass concentration of hydrophilic organic matter")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-! status = nf90_put_att(ncid2, var17, "units", "kg m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var17, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
+ status = nf90_def_var(ncid2, "NCONC_BCn", nf90_float,(/ lonID, latID, levID, timeID /), var29)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var29, "long_name", "number concentration of non-hydrophilic black carbon")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	  
+ status = nf90_put_att(ncid2, var29, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid2, var29, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	  
 
-! status = nf90_def_var(ncid2, "MCONC_BCn", nf90_float,(/ lonID, latID, levID, timeID /), var18)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var18, "long_name", "mass concentration of non-hydrophilic black carbon")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-! status = nf90_put_att(ncid2, var18, "units", "kg m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var18, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
+ status = nf90_def_var(ncid2, "NCONC_BCh", nf90_float,(/ lonID, latID, levID, timeID /), var30)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var30, "long_name", "number concentration of hydrophilic black carbon")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	  
+ status = nf90_put_att(ncid2, var30, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid2, var30, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
 
-! status = nf90_def_var(ncid2, "MCONC_BCh", nf90_float,(/ lonID, latID, levID, timeID /), var19)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var19, "long_name", "mass concentration of hydrophilic black carbon")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-! status = nf90_put_att(ncid2, var19, "units", "kg m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var19, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_def_var(ncid2, "NCONC_SO4", nf90_float,(/ lonID, latID, levID, timeID /), var31)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid2, var31, "long_name", "number concentration of sulfate")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	  
+ status = nf90_put_att(ncid2, var31, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid2, var31, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
 
-! status = nf90_def_var(ncid2, "MCONC_SO4", nf90_float,(/ lonID, latID, levID, timeID /), var20)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var20, "long_name", "mass concentration of sulfate")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-! status = nf90_put_att(ncid2, var20, "units", "kg m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var20, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-
-! ! NCONC  
-! status = nf90_def_var(ncid2, "NCONC_SSs", nf90_float,(/ lonID, latID, levID, timeID /), var21)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var21, "long_name", "number concentration of small mode sea salt")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-! status = nf90_put_att(ncid2, var21, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var21, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-
-! status = nf90_def_var(ncid2, "NCONC_SSm", nf90_float,(/ lonID, latID, levID, timeID /), var22)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var22, "long_name", "number concentration of medium mode sea salt")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-! status = nf90_put_att(ncid2, var22, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var22, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-
-! status = nf90_def_var(ncid2, "NCONC_SSl", nf90_float,(/ lonID, latID, levID, timeID /), var23)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var23, "long_name", "number concentration of large mode sea salt")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-! status = nf90_put_att(ncid2, var23, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var23, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-
-! status = nf90_def_var(ncid2, "NCONC_DUs", nf90_float,(/ lonID, latID, levID, timeID /), var24)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var24, "long_name", "number concentration of small mode dust")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-! status = nf90_put_att(ncid2, var24, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var24, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-
-! status = nf90_def_var(ncid2, "NCONC_DUm", nf90_float,(/ lonID, latID, levID, timeID /), var25)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var25, "long_name", "number concentration of medium mode dust")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-! status = nf90_put_att(ncid2, var25, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var25, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-
-! status = nf90_def_var(ncid2, "NCONC_DUl", nf90_float,(/ lonID, latID, levID, timeID /), var26)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var26, "long_name", "number concentration of large mode dust")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-! status = nf90_put_att(ncid2, var26, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var26, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-
-! status = nf90_def_var(ncid2, "NCONC_OMn", nf90_float,(/ lonID, latID, levID, timeID /), var27)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var27, "long_name", "number concentration of non-hydrophilic organic matter")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-! status = nf90_put_att(ncid2, var27, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var27, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-
-! status = nf90_def_var(ncid2, "NCONC_OMh", nf90_float,(/ lonID, latID, levID, timeID /), var28)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var28, "long_name", "number concentration of hydrophilic organic matter")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-! status = nf90_put_att(ncid2, var28, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var28, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-
-! status = nf90_def_var(ncid2, "NCONC_BCn", nf90_float,(/ lonID, latID, levID, timeID /), var29)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var29, "long_name", "number concentration of non-hydrophilic black carbon")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-! status = nf90_put_att(ncid2, var29, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var29, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-
-! status = nf90_def_var(ncid2, "NCONC_BCh", nf90_float,(/ lonID, latID, levID, timeID /), var30)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var30, "long_name", "number concentration of hydrophilic black carbon")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-! status = nf90_put_att(ncid2, var30, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var30, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-
-! status = nf90_def_var(ncid2, "NCONC_SO4", nf90_float,(/ lonID, latID, levID, timeID /), var31)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid2, var31, "long_name", "number concentration of sulfate")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	  
-! status = nf90_put_att(ncid2, var31, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid2, var31, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
+  ! Geop                                                                                                                                                                                                        
+  status = nf90_def_var(ncid2, "z", nf90_float,(/ lonID, latID, levID, timeID /), var32)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  status = nf90_put_att(ncid2, var32, "long_name", "height")
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  status = nf90_put_att(ncid2, var32, "units", "m")
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  status = nf90_put_att(ncid2, var32, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
 
 ! !--- Leave define mode
-! status = nf90_enddef(ncid2)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)  
+ status = nf90_enddef(ncid2)
+  IF(status /= nf90_NoErr) CALL handle_err(status)  
 
 ! !--- write data
-! status = nf90_put_var(ncid2, var102, VarTime)	       ! Time  
-!  IF(status /= nf90_NoErr) CALL handle_err(status) 
-! status = nf90_put_var(ncid2, var202, VarLev)	       ! Lev  
-!  IF(status /= nf90_NoErr) CALL handle_err(status) 
-! status = nf90_put_var(ncid2, var302, VarLat)	       ! Lat  
-!  IF(status /= nf90_NoErr) CALL handle_err(status) 
-! status = nf90_put_var(ncid2, var402, VarLon)	       ! Lon  
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-
-! status = nf90_put_var(ncid2, var10, REAL(VarMC_SSs))         ! MC	       
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid2, var11, REAL(VarMC_SSm))         
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid2, var12, REAL(VarMC_SSl))         
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid2, var13, REAL(VarMC_DUs))  	       
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid2, var14, REAL(VarMC_DUm))         
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid2, var15, REAL(VarMC_DUl))         
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid2, var16, REAL(VarMC_OMn))         
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	
-! status = nf90_put_var(ncid2, var17, REAL(VarMC_OMh))         
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid2, var18, REAL(VarMC_BCn))         
-!  IF(status /= nf90_NoErr) CALL handle_err(status)   
-! status = nf90_put_var(ncid2, var19, REAL(VarMC_BCh))         
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid2, var20, REAL(VarMC_SU))	       
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-
-! status = nf90_put_var(ncid2, var21, REAL(VarNC_SSs))         ! NC	       
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid2, var22, REAL(VarNC_SSm))         
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid2, var23, REAL(VarNC_SSl))         
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid2, var24, REAL(VarNC_DUs))  	       
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid2, var25, REAL(VarNC_DUm))         
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid2, var26, REAL(VarNC_DUl))         
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid2, var27, REAL(VarNC_OMn))         
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	
-! status = nf90_put_var(ncid2, var28, REAL(VarNC_OMh))         
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid2, var29, REAL(VarNC_BCn))         
-!  IF(status /= nf90_NoErr) CALL handle_err(status)   
-! status = nf90_put_var(ncid2, var30, REAL(VarNC_BCh))         
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid2, var31, REAL(VarNC_SU))	       
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-
+ status = nf90_put_var(ncid2, var102, VarTime)	       ! Time  
+  IF(status /= nf90_NoErr) CALL handle_err(status) 
+ status = nf90_put_var(ncid2, var202, VarLev)	       ! Lev  
+  IF(status /= nf90_NoErr) CALL handle_err(status) 
+ status = nf90_put_var(ncid2, var302, VarLat)	       ! Lat  
+  IF(status /= nf90_NoErr) CALL handle_err(status) 
+ status = nf90_put_var(ncid2, var402, VarLon)	       ! Lon  
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid2, var502, VarHyam)           ! hyam                                                                                                                                                  
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  !   WRITE(*,*) 'hyam'                                                                                                                                                                                         
+ status = nf90_put_var(ncid2, var602, VarHybm)           ! hybm                                                                                                                                                  
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  !   WRITE(*,*) 'hybm'                                                                                                                                                                                         
+ status = nf90_put_var(ncid2, var702, VarSP)             !SP                                                                                                                                                     
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  status = nf90_put_var(ncid2, var20, REAL(VarNC))      ! NC                                                                                                                                                     
+  IF(status /= nf90_NoErr) CALL handle_err(status)  
+ status = nf90_put_var(ncid2, var21, REAL(VarNC_SSs))         ! NC	       
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid2, var22, REAL(VarNC_SSm))         
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid2, var23, REAL(VarNC_SSl))         
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid2, var24, REAL(VarNC_DUs))  	       
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid2, var25, REAL(VarNC_DUm))         
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid2, var26, REAL(VarNC_DUl))         
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid2, var27, REAL(VarNC_OMn))         
+  IF(status /= nf90_NoErr) CALL handle_err(status)	
+ status = nf90_put_var(ncid2, var28, REAL(VarNC_OMh))         
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid2, var29, REAL(VarNC_BCn))         
+  IF(status /= nf90_NoErr) CALL handle_err(status)   
+ status = nf90_put_var(ncid2, var30, REAL(VarNC_BCh))         
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  status = nf90_put_var(ncid2, var31, REAL(VarNC_SU))
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  status = nf90_put_var(ncid2, var32, REAL(geop))
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+    !   WRITE(*,*) 'geop'     
 ! !--- close output netCDF file
-! status = nf90_close(ncid2)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)  
+ status = nf90_close(ncid2)
+ IF(status /= nf90_NoErr) CALL handle_err(status)  
 
-! WRITE(*,*) ' '
-! WRITE(*,*) 'FINISHED OUTPUT 2'
+ WRITE(*,*) ' '
+ WRITE(*,*) 'FINISHED OUTPUT 2'
 
 !!--------------------------------------------------------------------------
 !!--- create output netCDF file
-! status = nf90_create(path = ofile3, cmode = NF90_NETCDF4, ncid = ncid3)
-!  IF(status /= nf90_noerr) CALL handle_err(status)
+ status = nf90_create(path = ofile3, cmode = NF90_NETCDF4, ncid = ncid3)
+ IF(status /= nf90_noerr) CALL handle_err(status)
 
 ! !--- Define the dimensions
-! status = nf90_def_dim(ncid3, "time", nf90_unlimited, timeID)
-!  IF(status /= nf90_noerr) CALL handle_err(status)
-! status = nf90_def_dim(ncid3, "lev", nLe, levID)
-!  IF(status /= nf90_noerr) CALL handle_err(status)   
-! status = nf90_def_dim(ncid3, "lat", nLa, latID)
-!  IF(status /= nf90_noerr) CALL handle_err(status)
-! status = nf90_def_dim(ncid3, "lon", nLo, lonID)
-!  IF(status /= nf90_noerr) CALL handle_err(status)
+ status = nf90_def_dim(ncid3, "time", nf90_unlimited, timeID)
+  IF(status /= nf90_noerr) CALL handle_err(status)
+ status = nf90_def_dim(ncid3, "lev", nLe, levID)
+  IF(status /= nf90_noerr) CALL handle_err(status)   
+ status = nf90_def_dim(ncid3, "lat", nLa, latID)
+  IF(status /= nf90_noerr) CALL handle_err(status)
+ status = nf90_def_dim(ncid3, "lon", nLo, lonID)
+  IF(status /= nf90_noerr) CALL handle_err(status)
 
 ! !--- Define global attributes 
 ! status = nf90_put_att(ncid3, NF90_GLOBAL, "Supersaturation", sscribe)
 ! status = nf90_put_att(ncid3, NF90_GLOBAL, "Aerosol Species", specscribe)
 ! 
 ! ! Time   
-! status = nf90_def_var(ncid3, "time", nf90_double,(/ timeID /), var103)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid3, var103, "long_name", "time")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var103, "units", timestr)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var103, "calendar", "proleptic_gregorian")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	       
-! status = nf90_put_att(ncid3, var103, "_FillValue", FillAtt2)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_def_var(ncid3, "time", nf90_double,(/ timeID /), var103)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid3, var103, "long_name", "time")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var103, "units", timestr)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var103, "calendar", "proleptic_gregorian")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	       
+ status = nf90_put_att(ncid3, var103, "_FillValue", FillAtt2)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
 
 ! !Lev
-! status = nf90_def_var(ncid3, "lev", nf90_double,(/ levID /), var203)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid3, var203, "long_name", "model level")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var203, "units", "level")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid3, var203, "_FillValue", FillAtt2)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_def_var(ncid3, "lev", nf90_double,(/ levID /), var203)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid3, var203, "long_name", "model level")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var203, "units", "level")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid3, var203, "_FillValue", FillAtt2)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
 
 ! !Lat
-! status = nf90_def_var(ncid3, "lat", nf90_double,(/ latID /), var303)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid3, var303, "long_name", "latitude")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var303, "units", "degrees_north")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid3, var303, "_FillValue", FillAtt2)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var303, "axis", "Y")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_def_var(ncid3, "lat", nf90_double,(/ latID /), var303)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid3, var303, "long_name", "latitude")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var303, "units", "degrees_north")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid3, var303, "_FillValue", FillAtt2)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var303, "axis", "Y")
+  IF(status /= nf90_NoErr) CALL handle_err(status)
 
 ! !Lon
-! status = nf90_def_var(ncid3, "lon", nf90_double,(/ lonID /), var403)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid3, var403, "long_name", "longitude")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var403, "units", "degrees_east")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid3, var403, "_FillValue", FillAtt2)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var403, "axis", "X")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-
+ status = nf90_def_var(ncid3, "lon", nf90_double,(/ lonID /), var403)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid3, var403, "long_name", "longitude")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var403, "units", "degrees_east")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid3, var403, "_FillValue", FillAtt2)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var403, "axis", "X")
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ ! Hyam                                                                                                                                                                                                        
+  status = nf90_def_var(ncid3, "hyam", nf90_double,(/ levID /), var503)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  status = nf90_put_att(ncid3, var503, "long_name", "hybrid A coefficient at layer midpoints")
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  status = nf90_put_att(ncid3, var503, "units", "Pa")
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  status = nf90_put_att(ncid3, var503, "_FillValue", FillAtt2)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  !WRITE(*,*) 'def hyam'                                                                                                                                                                                         
+  ! Hybm                                                                                                                                                                                                        
+  status = nf90_def_var(ncid3, "hybm", nf90_double,(/ levID /), var603)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  status = nf90_put_att(ncid3, var603, "long_name", "hybrid B coefficient at layer midpoints")
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  status = nf90_put_att(ncid3, var603, "units", "Pa")
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  status = nf90_put_att(ncid3, var603, "_FillValue", FillAtt2)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+   ! WRITE(*,*) 'def hybm'                                                                                                                                                                                       
+    ! SP                                                                                                                                                                                                         
+  status = nf90_def_var(ncid3, "sp", nf90_float,(/ lonID, latID, timeID /), var703)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  status = nf90_put_att(ncid3, var703, "long_name", "Surface Pressure")
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  status = nf90_put_att(ncid3, var703, "units", "Pa")
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  status = nf90_put_att(ncid3, var703, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+    !  WRITE(*,*) 'def SP'                                            
 ! ! CCN_02      
-! status = nf90_def_var(ncid3, "CCN_02_SSs", nf90_float,(/ lonID, latID, levID, timeID /), var33)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid3, var33, "long_name", "cloud condensation nuclei from small mode sea salt at 0.2% ssat")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var33, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid3, var33, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_def_var(ncid3, "CCN_02_SSs", nf90_float,(/ lonID, latID, levID, timeID /), var33)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid3, var33, "long_name", "cloud condensation nuclei from small mode sea salt at 0.2% ssat")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var33, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid3, var33, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
 
-! status = nf90_def_var(ncid3, "CCN_02_SSm", nf90_float,(/ lonID, latID, levID, timeID /), var34)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid3, var34, "long_name", "cloud condensation nuclei from medium mode sea salt at 0.2% ssat")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var34, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid3, var34, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_def_var(ncid3, "CCN_02_SSm", nf90_float,(/ lonID, latID, levID, timeID /), var34)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid3, var34, "long_name", "cloud condensation nuclei from medium mode sea salt at 0.2% ssat")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var34, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid3, var34, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
 
-! status = nf90_def_var(ncid3, "CCN_02_SSl", nf90_float,(/ lonID, latID, levID, timeID /), var35)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid3, var35, "long_name", "cloud condensation nuclei from large mode sea salt at 0.2% ssat")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var35, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid3, var35, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_def_var(ncid3, "CCN_02_SSl", nf90_float,(/ lonID, latID, levID, timeID /), var35)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid3, var35, "long_name", "cloud condensation nuclei from large mode sea salt at 0.2% ssat")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var35, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid3, var35, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
 
-! status = nf90_def_var(ncid3, "CCN_02_OMh", nf90_float,(/ lonID, latID, levID, timeID /), var36)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid3, var36, "long_name", "cloud condensation nuclei from hydrophilic organic matter at 0.2% ssat")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var36, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid3, var36, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_def_var(ncid3, "CCN_02_OMh", nf90_float,(/ lonID, latID, levID, timeID /), var36)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid3, var36, "long_name", "cloud condensation nuclei from hydrophilic organic matter at 0.2% ssat")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var36, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid3, var36, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
 
-! status = nf90_def_var(ncid3, "CCN_02_BCh", nf90_float,(/ lonID, latID, levID, timeID /), var37)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid3, var37, "long_name", "cloud condensation nuclei from hydrophilic black carbon at 0.2% ssat")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var37, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid3, var37, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_def_var(ncid3, "CCN_02_BCh", nf90_float,(/ lonID, latID, levID, timeID /), var37)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid3, var37, "long_name", "cloud condensation nuclei from hydrophilic black carbon at 0.2% ssat")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var37, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid3, var37, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
 
-! status = nf90_def_var(ncid3, "CCN_02_SO4", nf90_float,(/ lonID, latID, levID, timeID /), var38)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid3, var38, "long_name", "cloud condensation nuclei from sulfate at 0.2% ssat")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var38, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid3, var38, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_def_var(ncid3, "CCN_02_SO4", nf90_float,(/ lonID, latID, levID, timeID /), var38)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid3, var38, "long_name", "cloud condensation nuclei from sulfate at 0.2% ssat")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var38, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid3, var38, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
 
 ! ! CCN_04       
-! status = nf90_def_var(ncid3, "CCN_04_SSs", nf90_float,(/ lonID, latID, levID, timeID /), var40)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid3, var40, "long_name", "cloud condensation nuclei from small mode sea salt at 0.4% ssat")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var40, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid3, var40, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_def_var(ncid3, "CCN_04_SSs", nf90_float,(/ lonID, latID, levID, timeID /), var40)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid3, var40, "long_name", "cloud condensation nuclei from small mode sea salt at 0.4% ssat")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var40, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid3, var40, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
 
-! status = nf90_def_var(ncid3, "CCN_04_SSm", nf90_float,(/ lonID, latID, levID, timeID /), var41)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid3, var41, "long_name", "cloud condensation nuclei from medium mode sea salt at 0.4% ssat")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var41, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid3, var41, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_def_var(ncid3, "CCN_04_SSm", nf90_float,(/ lonID, latID, levID, timeID /), var41)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid3, var41, "long_name", "cloud condensation nuclei from medium mode sea salt at 0.4% ssat")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var41, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid3, var41, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
 
-! status = nf90_def_var(ncid3, "CCN_04_SSl", nf90_float,(/ lonID, latID, levID, timeID /), var42)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid3, var42, "long_name", "cloud condensation nuclei from large mode sea salt at 0.4% ssat")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var42, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid3, var42, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_def_var(ncid3, "CCN_04_SSl", nf90_float,(/ lonID, latID, levID, timeID /), var42)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid3, var42, "long_name", "cloud condensation nuclei from large mode sea salt at 0.4% ssat")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var42, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid3, var42, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
 
-! status = nf90_def_var(ncid3, "CCN_04_OMh", nf90_float,(/ lonID, latID, levID, timeID /), var43)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid3, var43, "long_name", "cloud condensation nuclei from hydrophilic organic matter at 0.4% ssat")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var43, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid3, var43, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_def_var(ncid3, "CCN_04_OMh", nf90_float,(/ lonID, latID, levID, timeID /), var43)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid3, var43, "long_name", "cloud condensation nuclei from hydrophilic organic matter at 0.4% ssat")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var43, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid3, var43, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
 
-! status = nf90_def_var(ncid3, "CCN_04_BCh", nf90_float,(/ lonID, latID, levID, timeID /), var44)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid3, var44, "long_name", "cloud condensation nuclei from hydrophilic black carbon at 0.4% ssat")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var44, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid3, var44, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_def_var(ncid3, "CCN_04_BCh", nf90_float,(/ lonID, latID, levID, timeID /), var44)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid3, var44, "long_name", "cloud condensation nuclei from hydrophilic black carbon at 0.4% ssat")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var44, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid3, var44, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
 
-! status = nf90_def_var(ncid3, "CCN_04_SO4", nf90_float,(/ lonID, latID, levID, timeID /), var45)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid3, var45, "long_name", "cloud condensation nuclei from sulfate at 0.4% ssat")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var45, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid3, var45, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_def_var(ncid3, "CCN_04_SO4", nf90_float,(/ lonID, latID, levID, timeID /), var45)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid3, var45, "long_name", "cloud condensation nuclei from sulfate at 0.4% ssat")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var45, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid3, var45, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
 
 ! ! CCN_10 
-! status = nf90_def_var(ncid3, "CCN_10_SSs", nf90_float,(/ lonID, latID, levID, timeID /), var47)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid3, var47, "long_name", "cloud condensation nuclei from small mode sea salt at 1.0% ssat")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var47, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid3, var47, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_def_var(ncid3, "CCN_10_SSs", nf90_float,(/ lonID, latID, levID, timeID /), var46)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid3, var46, "long_name", "cloud condensation nuclei from small mode sea salt at 1.0% ssat")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var46, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid3, var46, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
 
-! status = nf90_def_var(ncid3, "CCN_10_SSm", nf90_float,(/ lonID, latID, levID, timeID /), var48)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid3, var48, "long_name", "cloud condensation nuclei from medium mode sea salt at 1.0% ssat")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var48, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid3, var48, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_def_var(ncid3, "CCN_10_SSm", nf90_float,(/ lonID, latID, levID, timeID /), var47)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid3, var47, "long_name", "cloud condensation nuclei from medium mode sea salt at 1.0% ssat")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var47, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid3, var47, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
 
-! status = nf90_def_var(ncid3, "CCN_10_SSl", nf90_float,(/ lonID, latID, levID, timeID /), var49)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid3, var49, "long_name", "cloud condensation nuclei from large mode sea salt at 1.0% ssat")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var49, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid3, var49, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_def_var(ncid3, "CCN_10_SSl", nf90_float,(/ lonID, latID, levID, timeID /), var48)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid3, var48, "long_name", "cloud condensation nuclei from large mode sea salt at 1.0% ssat")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var48, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid3, var48, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
 
-! status = nf90_def_var(ncid3, "CCN_10_OMh", nf90_float,(/ lonID, latID, levID, timeID /), var50)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid3, var50, "long_name", "cloud condensation nuclei from hydrophilic organic matter at 1.0% ssat")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var50, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid3, var50, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_def_var(ncid3, "CCN_10_OMh", nf90_float,(/ lonID, latID, levID, timeID /), var49)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid3, var49, "long_name", "cloud condensation nuclei from hydrophilic organic matter at 1.0% ssat")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var49, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid3, var49, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
 
-! status = nf90_def_var(ncid3, "CCN_10_BCh", nf90_float,(/ lonID, latID, levID, timeID /), var51)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid3, var51, "long_name", "cloud condensation nuclei from hydrophilic black carbon at 1.0% ssat")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var51, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid3, var51, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_def_var(ncid3, "CCN_10_BCh", nf90_float,(/ lonID, latID, levID, timeID /), var50)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid3, var50, "long_name", "cloud condensation nuclei from hydrophilic black carbon at 1.0% ssat")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var50, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid3, var50, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
 
-! status = nf90_def_var(ncid3, "CCN_10_SO4", nf90_float,(/ lonID, latID, levID, timeID /), var52)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_att(ncid3, var52, "long_name", "cloud condensation nuclei from sulfate at 1.0% ssat")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	   
-! status = nf90_put_att(ncid3, var52, "units", "m**-3")
-!  IF(status /= nf90_NoErr) CALL handle_err(status)	    
-! status = nf90_put_att(ncid3, var52, "_FillValue", FillAtt)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)   
+ status = nf90_def_var(ncid3, "CCN_10_SO4", nf90_float,(/ lonID, latID, levID, timeID /), var51)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_att(ncid3, var51, "long_name", "cloud condensation nuclei from sulfate at 1.0% ssat")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	   
+ status = nf90_put_att(ncid3, var51, "units", "m**-3")
+  IF(status /= nf90_NoErr) CALL handle_err(status)	    
+ status = nf90_put_att(ncid3, var51, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)   
+  ! Geop                                                                                                                                                                                                         
+  status = nf90_def_var(ncid3, "z", nf90_float,(/ lonID, latID, levID, timeID /), var52)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  status = nf90_put_att(ncid2, var52, "long_name", "height")
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  status = nf90_put_att(ncid2, var52, "units", "m")
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  status = nf90_put_att(ncid2, var52, "_FillValue", FillAtt)
+  IF(status /= nf90_NoErr) CALL handle_err(status)
 
 ! !--- Leave define mode
-! status = nf90_enddef(ncid3)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)  
+ status = nf90_enddef(ncid3)
+  IF(status /= nf90_NoErr) CALL handle_err(status)  
 
 ! !--- write data
-! status = nf90_put_var(ncid3, var103, VarTime)	       ! Time  
-!  IF(status /= nf90_NoErr) CALL handle_err(status) 
-! status = nf90_put_var(ncid3, var203, VarLev)	       ! Lev  
-!  IF(status /= nf90_NoErr) CALL handle_err(status) 
-! status = nf90_put_var(ncid3, var303, VarLat)	       ! Lat  
-!  IF(status /= nf90_NoErr) CALL handle_err(status) 
-! status = nf90_put_var(ncid3, var403, VarLon)	       ! Lon  
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid3, var103, VarTime)	       ! Time  
+  IF(status /= nf90_NoErr) CALL handle_err(status) 
+ status = nf90_put_var(ncid3, var203, VarLev)	       ! Lev  
+  IF(status /= nf90_NoErr) CALL handle_err(status) 
+ status = nf90_put_var(ncid3, var303, VarLat)	       ! Lat  
+  IF(status /= nf90_NoErr) CALL handle_err(status) 
+ status = nf90_put_var(ncid3, var403, VarLon)	       ! Lon  
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+   status = nf90_put_var(ncid3, var503, VarHyam)           ! hyam                                                                                                                                                
+   IF(status /= nf90_NoErr) CALL handle_err(status)
+!   WRITE(*,*) 'hyam'                                                                                                                                                                                            
+   status = nf90_put_var(ncid3, var603, VarHybm)           ! hybm                                                                                                                                               
+   IF(status /= nf90_NoErr) CALL handle_err(status)
+!   WRITE(*,*) 'hybm'                                                                                                                                                                                            
+   status = nf90_put_var(ncid3, var703, VarSP)             !SP                                                                                                                                                   
+   IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid3, var33, REAL(VarCCN_02_SSs))     !CCN_02         
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid3, var34, REAL(VarCCN_02_SSm))	       
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid3, var35, REAL(VarCCN_02_SSl))	       
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid3, var36, REAL(VarCCN_02_OMh))	       
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid3, var37, REAL(VarCCN_02_BCh))	       
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid3, var38, REAL(VarCCN_02_SU))	       
+  IF(status /= nf90_NoErr) CALL handle_err(status)
 
-! status = nf90_put_var(ncid3, var33, REAL(VarCCN_02_SSs))     !CCN_02         
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid3, var34, REAL(VarCCN_02_SSm))	       
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid3, var35, REAL(VarCCN_02_SSl))	       
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid3, var36, REAL(VarCCN_02_OMh))	       
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid3, var37, REAL(VarCCN_02_BCh))	       
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid3, var38, REAL(VarCCN_02_SU))	       
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid3, var40, REAL(VarCCN_04_SSs))    !CCN_04		      
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid3, var41, REAL(VarCCN_04_SSm))	      
+   IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid3, var42, REAL(VarCCN_04_SSl))	       
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid3, var43, REAL(VarCCN_04_OMh))	       
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid3, var44, REAL(VarCCN_04_BCh))	       
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid3, var45, REAL(VarCCN_04_SU))	       
+  IF(status /= nf90_NoErr) CALL handle_err(status)
 
-! status = nf90_put_var(ncid3, var40, REAL(VarCCN_04_SSs))    !CCN_04		      
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid3, var41, REAL(VarCCN_04_SSm))	      
-!   IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid3, var42, REAL(VarCCN_04_SSl))	       
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid3, var43, REAL(VarCCN_04_OMh))	       
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid3, var44, REAL(VarCCN_04_BCh))	       
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid3, var45, REAL(VarCCN_04_SU))	       
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-
-! status = nf90_put_var(ncid3, var47, REAL(VarCCN_10_SSs))     !CCN_10         
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid3, var48, REAL(VarCCN_10_SSm))	       
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid3, var49, REAL(VarCCN_10_SSl))	       
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid3, var50, REAL(VarCCN_10_OMh))	       
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid3, var51, REAL(VarCCN_10_BCh))	       
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-! status = nf90_put_var(ncid3, var52, REAL(VarCCN_10_SU))	       
-!  IF(status /= nf90_NoErr) CALL handle_err(status)
-!
+ status = nf90_put_var(ncid3, var46, REAL(VarCCN_10_SSs))     !CCN_10         
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid3, var47, REAL(VarCCN_10_SSm))	       
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid3, var48, REAL(VarCCN_10_SSl))	       
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid3, var49, REAL(VarCCN_10_OMh))	       
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid3, var50, REAL(VarCCN_10_BCh))	       
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+ status = nf90_put_var(ncid3, var51, REAL(VarCCN_10_SU))	       
+  IF(status /= nf90_NoErr) CALL handle_err(status)
+  status = nf90_put_var(ncid3, var52, REAL(geop))
+  IF(status /= nf90_NoErr) CALL handle_err(status)
 ! !--- close output netCDF file
-! status = nf90_close(ncid3)
-!  IF(status /= nf90_NoErr) CALL handle_err(status)  
+ status = nf90_close(ncid3)
+  IF(status /= nf90_NoErr) CALL handle_err(status)  
 ! 
-! WRITE(*,*) ' '
-! WRITE(*,*) 'FINISHED OUTPUT 3'
+ WRITE(*,*) ' '
+ WRITE(*,*) 'FINISHED OUTPUT 3'
 
-  END SUBROUTINE netcdf_output  
-
-
+ END SUBROUTINE netcdf_output_supplementary_variables 
 
   !--- ERROR check:
   SUBROUTINE handle_err(status)
