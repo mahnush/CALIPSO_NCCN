@@ -640,15 +640,16 @@ IMPLICIT NONE
  CALL netcdf_output_supplementary_variables(ofile2, ofile3, year, mon, day, &
  			nTimes, nLev, nLat, nLon, &
 			time, lev, lat, lon, hyam, hybm, &
-                        SP,VarNC, VarNC_SSs, VarNC_SSm, VarNC_SSl, &                                                                                                                                             
+                        SP, VarNC, VarNC_SSs, VarNC_SSm, VarNC_SSl, &                                                                                                                                            
                         VarNC_DUs, VarNC_DUm, VarNC_DUl, &                                                                                                                                                       
                         VarNC_OMn, VarNC_OMh, VarNC_BCn, VarNC_BCh, VarNC_SU, &
                         VarCCN_02_SSs, VarCCN_02_SSm, VarCCN_02_SSl, &
+                        VarCCN_02_OMh,VarCCN_02_BCh, VarCCN_02_SU,&
                         VarCCN_04_SSs, VarCCN_04_SSm, VarCCN_04_SSl, &
+                        VarCCN_04_OMh,VarCCN_04_BCh, VarCCN_04_SU, &
                         VarCCN_10_SSs, VarCCN_10_SSm, VarCCN_10_SSl, &
-                        VarCCN_02_OMh,VarCCN_04_OMh,VarCCN_10_OMh, &
-                        VarCCN_02_BCh, VarCCN_04_BCh, VarCCN_10_BCh, &
-                        VarCCN_02_SU, VarCCN_04_SU, VarCCN_10_SU, geop)
+                        VarCCN_10_OMh,VarCCN_10_BCh,VarCCN_10_SU, geop)
+                        
   
  WRITE(*,*) 'END PROGRAM'
 
