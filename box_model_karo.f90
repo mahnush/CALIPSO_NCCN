@@ -37,11 +37,6 @@ IMPLICIT NONE
   REAL(dp),ALLOCATABLE,DIMENSION(:,:,:)         :: SP
 
   ! parameters for output file  
-  REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)	:: VarCCN_01, VarCCN_02, VarCCN_03
-  REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)       :: VarCCN_04, VarCCN_05, VarCCN_06
-  REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)       :: VarCCN_07, VarCCN_08, VarCCN_09
-  REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)       :: VarCCN_10
-
   REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)       :: VarCCN_ss_02, VarCCN_ss_04, VarCCN_ss_05
   REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)       :: VarCCN_ss_06, VarCCN_ss_08, VarCCN_ss_1
   REAL(dp),ALLOCATABLE,DIMENSION(:,:,:,:)       :: VarCCN_ss_015, VarCCN_ss_025
@@ -225,17 +220,6 @@ IMPLICIT NONE
 
   !WRITE(*,*) ' '     
   !WRITE(*,*) 'START COMPUTATIONS IN LOOPS'
-
-  ALLOCATE(VarCCN_01(nLon, nLat, nLev, nTimes))
-  ALLOCATE(VarCCN_02(nLon, nLat, nLev, nTimes))
-  ALLOCATE(VarCCN_03(nLon, nLat, nLev, nTimes))
-  ALLOCATE(VarCCN_04(nLon, nLat, nLev, nTimes))
-  ALLOCATE(VarCCN_05(nLon, nLat, nLev, nTimes))
-  ALLOCATE(VarCCN_06(nLon, nLat, nLev, nTimes))
-  ALLOCATE(VarCCN_07(nLon, nLat, nLev, nTimes))
-  ALLOCATE(VarCCN_08(nLon, nLat, nLev, nTimes))
-  ALLOCATE(VarCCN_09(nLon, nLat, nLev, nTimes))
-  ALLOCATE(VarCCN_10(nLon, nLat, nLev, nTimes))
   ALLOCATE(VarCCN_ss_02(nLon, nLat, nLev, nTimes))
   ALLOCATE(VarCCN_ss_04(nLon, nLat, nLev, nTimes))
   ALLOCATE(VarCCN_ss_05(nLon, nLat, nLev, nTimes))
@@ -448,17 +432,6 @@ IMPLICIT NONE
       !WRITE(*,*) 'OUTPUT VARIABLE:' 
 
       IF(missflag .EQ. 1) THEN
-         
-        VarCCN_01(lo,la,ig,it) = -9999.99_dp
-        VarCCN_02(lo,la,ig,it) = -9999.99_dp
-        VarCCN_03(lo,la,ig,it) = -9999.99_dp
-        VarCCN_04(lo,la,ig,it) = -9999.99_dp
-        VarCCN_05(lo,la,ig,it) = -9999.99_dp
-        VarCCN_06(lo,la,ig,it) = -9999.99_dp
-        VarCCN_07(lo,la,ig,it) = -9999.99_dp
-        VarCCN_08(lo,la,ig,it) = -9999.99_dp
-        VarCCN_09(lo,la,ig,it) = -9999.99_dp
-        VarCCN_10(lo,la,ig,it) = -9999.99_dp
         VarNC(lo,la,ig,it) = -9999.99_dp
 !   VarMC(lo,la,ig,it) = -9999.99_dp
         VarCCN_ss_02(lo,la,ig,it) = -9999.99_dp
@@ -528,16 +501,6 @@ IMPLICIT NONE
         VarNC_SU(lo,la,ig,it) = -9999.99_dp
     
    ELSE    
-     VarCCN_01(lo,la,ig,it) = pcdncact(kbdim,klev,1) 
-     VarCCN_02(lo,la,ig,it) = pcdncact(kbdim,klev,2)     
-     VarCCN_03(lo,la,ig,it) = pcdncact(kbdim,klev,3)
-     VarCCN_04(lo,la,ig,it) = pcdncact(kbdim,klev,4)
-     VarCCN_05(lo,la,ig,it) = pcdncact(kbdim,klev,5)
-     VarCCN_06(lo,la,ig,it) = pcdncact(kbdim,klev,6)
-     VarCCN_07(lo,la,ig,it) = pcdncact(kbdim,klev,7)
-     VarCCN_08(lo,la,ig,it) = pcdncact(kbdim,klev,8)
-     VarCCN_09(lo,la,ig,it) = pcdncact(kbdim,klev,9)
-     VarCCN_10(lo,la,ig,it) = pcdncact(kbdim,klev,10)
      
 !   VarMC(lo,la,ig,it) = SUM(mconc(kbdim,klev,:))
      VarNC(lo,la,ig,it) = SUM(nconc(kbdim,klev,:))

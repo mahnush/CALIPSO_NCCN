@@ -429,11 +429,6 @@ CONTAINS
   REAL(dp), INTENT(in), DIMENSION(nLe)                  :: VarHyam
   REAL(dp), INTENT(in), DIMENSION(nLe)                  :: VarHybm
   REAL(dp), INTENT(in), DIMENSION(nLo,nLa,nT)           :: VarSP
-!  REAL(dp), INTENT(in), DIMENSION(nLo,nLa,nLe,nT)      	:: VarCCN_02, VarCCN_03
-!  REAL(dp), INTENT(in), DIMENSION(nLo,nLa,nLe,nT)       :: VarCCN_04, VarCCN_05, VarCCN_06
-!  REAL(dp), INTENT(in), DIMENSION(nLo,nLa,nLe,nT)       :: VarCCN_07, VarCCN_08, VarCCN_09, VarCCN_10
-
-
 
 !WRITE(*,*) 'hyam', Hyam
 
@@ -474,19 +469,6 @@ CONTAINS
   INTEGER :: var19, var20, var21, var22, var23,var24
   INTEGER :: var25, var26
 
-
-!  INTEGER :: var5, var6, var7, var8, var9
-!  INTEGER :: var10, var11, var12, var13, var14, var15, var16, var17, var18, var19, var20
-!  INTEGER :: var21, var22, var23, var24, var25, var26, var27, var28, var29, var30, var31
-!  INTEGER :: var33, var34, var35, var36, var37, var38
-!  INTEGER :: var40, var41, var42, var43, var44, var45
-!  INTEGER :: var47, var48, var49, var50, var51, var52
-! !free Integer :: var32, var39, var46
-
-!  INTEGER :: var102, var202, var302, var402
-!  INTEGER :: var103, var203, var303, var403
-  
-            
   REAL, PARAMETER	:: FillAtt = -9999.99
   REAL(dp), PARAMETER	:: FillAtt2 = -9999.99
   CHARACTER(len=31)	:: timestr = "hours since XXXX-YY-DD 00:00:00"      
