@@ -15,8 +15,8 @@ PROGRAM box_model_karo
 IMPLICIT NONE
 
   CHARACTER(len=150)	:: ifilename1, ifilename2
-  CHARACTER(len=150)	:: ofilename1, ofilename2, ofilename3
-  CHARACTER(len=:), ALLOCATABLE :: ifile1,ifile2,ofile1, ofile2, ofile3
+  CHARACTER(len=150)	:: ofilename1!, ofilename2, ofilename3
+  CHARACTER(len=:), ALLOCATABLE :: ifile1,ifile2,ofile1!, ofile2, ofile3
    
   CHARACTER(len=4)	:: year
   CHARACTER(len=2)	:: mon
@@ -128,24 +128,24 @@ IMPLICIT NONE
 !  			ofilename1, ofilename2, ofilename3, year, mon)
   
 
-  CALL read_input(ifilename1, ifilename2, &
-  			ofilename1, ofilename2, ofilename3, year, mon, day)
-   
+!  CALL read_input(ifilename1, ifilename2, &
+!  			ofilename1, ofilename2, ofilename3, year, mon, day)
+ CALL read_input(ifilename1, ifilename2,  ofilename1, year, mon, day)   
    
   ALLOCATE(character(len=LEN_TRIM(ifilename1)) :: ifile1)
   ALLOCATE(character(len=LEN_TRIM(ifilename2)) :: ifile2)  
   !ALLOCATE(character(len=LEN_TRIM(ifilename3)) :: ifile3)   
   !ALLOCATE(character(len=LEN_TRIM(ifilename4)) :: ifile4)   
   ALLOCATE(character(len=LEN_TRIM(ofilename1)) :: ofile1)   
-  ALLOCATE(character(len=LEN_TRIM(ofilename2)) :: ofile2)
-  ALLOCATE(character(len=LEN_TRIM(ofilename3)) :: ofile3)
+!  ALLOCATE(character(len=LEN_TRIM(ofilename2)) :: ofile2)
+!  ALLOCATE(character(len=LEN_TRIM(ofilename3)) :: ofile3)
   ifile1 = TRIM(ifilename1)
   ifile2 = TRIM(ifilename2)  
   !ifile3 = TRIM(ifilename3)  
   !ifile4 = TRIM(ifilename4)  
   ofile1 = TRIM(ofilename1)  
-  ofile2 = TRIM(ofilename2)
-  ofile3 = TRIM(ofilename3)
+  !ofile2 = TRIM(ofilename2)
+  !ofile3 = TRIM(ofilename3)
  
 !  WRITE(*,*) 'ifile1 ',  ifilename1
 !  WRITE(*,*) 'ifile1 ',  ifile1  
@@ -600,18 +600,18 @@ IMPLICIT NONE
                         VarCCN_ss_05, VarCCN_ss_06, VarCCN_ss_08, &
                         VarCCN_ss_1,VarCCN_ss_015,VarCCN_ss_025,geop)
 
- CALL netcdf_output_supplementary_variables(ofile2, ofile3, year, mon, day, &
- 			nTimes, nLev, nLat, nLon, &
-			time, lev, lat, lon, hyam, hybm, &
-                        SP, VarNC, VarNC_SSs, VarNC_SSm, VarNC_SSl, &                                                                                                                                            
-                        VarNC_DUs, VarNC_DUm, VarNC_DUl, &                                                                                                                                                       
-                        VarNC_OMn, VarNC_OMh, VarNC_BCn, VarNC_BCh, VarNC_SU, &
-                        VarCCN_02_SSs, VarCCN_02_SSm, VarCCN_02_SSl, &
-                        VarCCN_02_OMh,VarCCN_02_BCh, VarCCN_02_SU,&
-                        VarCCN_04_SSs, VarCCN_04_SSm, VarCCN_04_SSl, &
-                        VarCCN_04_OMh,VarCCN_04_BCh, VarCCN_04_SU, &
-                        VarCCN_10_SSs, VarCCN_10_SSm, VarCCN_10_SSl, &
-                        VarCCN_10_OMh,VarCCN_10_BCh,VarCCN_10_SU, geop)
+! CALL netcdf_output_supplementary_variables(ofile2, ofile3, year, mon, day, &
+! 			nTimes, nLev, nLat, nLon, &
+!			time, lev, lat, lon, hyam, hybm, &
+!                        SP, VarNC, VarNC_SSs, VarNC_SSm, VarNC_SSl, &                                                                                                                                           
+!                        VarNC_DUs, VarNC_DUm, VarNC_DUl, &                                                                                                                                                      
+!                        VarNC_OMn, VarNC_OMh, VarNC_BCn, VarNC_BCh, VarNC_SU, &
+!                        VarCCN_02_SSs, VarCCN_02_SSm, VarCCN_02_SSl, &
+!                        VarCCN_02_OMh,VarCCN_02_BCh, VarCCN_02_SU,&
+!                        VarCCN_04_SSs, VarCCN_04_SSm, VarCCN_04_SSl, &
+!                        VarCCN_04_OMh,VarCCN_04_BCh, VarCCN_04_SU, &
+!                        VarCCN_10_SSs, VarCCN_10_SSm, VarCCN_10_SSl, &
+!                        VarCCN_10_OMh,VarCCN_10_BCh,VarCCN_10_SU, geop)
                         
   
  WRITE(*,*) 'END PROGRAM'
